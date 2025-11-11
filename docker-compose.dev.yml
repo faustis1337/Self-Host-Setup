@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  react:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: sh -c "npm install && npm start"
+    ports:
+      - "3000:3000"
